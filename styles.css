@@ -1,0 +1,110 @@
+/* Styles globaux */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Bannière d'accueil */
+.banner {
+    background-image: url('https://www.example.com/image-bannière.jpg'); /* Remplace par une vraie URL d'image */
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.banner h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.banner p {
+    font-size: 1.5em;
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    background-color: #8DAB94;
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Section d'introduction */
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #e8f5e9;
+}
+
+.intro h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Section partenaires en vedette */
+.partners-highlight {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.partners-highlight h2 {
+    font-size: 2em;
+    color: #8DAB94;
+}
+
+.partners-highlight p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Section de la carte */
+#map-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#map-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Pied de page */
+footer {
+    background-color: #8DAB94;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9em;
+}

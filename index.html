@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RéPass - Votre Guide sur l'Île de Ré</title>
+    <!-- Feuilles de style -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Leaflet CSS pour la carte interactive -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+
+    <!-- En-tête du site -->
+    <header>
+        <div class="banner">
+            <h1>RéPass</h1>
+            <p>Profitez des meilleures offres et partenaires sur l'Île de Ré</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="pages/login.html">Connexion</a></li>
+                <li><a href="pages/partners.html">Partenaires</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section d'introduction -->
+    <section class="intro">
+        <h2>Bienvenue sur RéPass</h2>
+        <p>RéPass est votre compagnon idéal pour découvrir les trésors cachés de l'île de Ré. Bénéficiez d'offres exclusives auprès de nos partenaires locaux et vivez une expérience unique.</p>
+    </section>
+
+    <!-- Section partenaires -->
+    <section class="partners-highlight">
+        <h2>Nos Partenaires en Vedette</h2>
+        <p>Explorez les meilleures adresses sur l'île de Ré avec des réductions et des offres spéciales réservées aux utilisateurs de RéPass.</p>
+    </section>
+
+    <!-- Section carte interactive -->
+    <section id="map-section">
+        <h2>Découvrez nos Partenaires sur la Carte</h2>
+        <div id="map"></div> <!-- La carte interactive -->
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>© 2024 RéPass - Tous droits réservés.</p>
+    </footer>
+
+    <!-- Leaflet JS pour la carte interactive -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/app.js"></script> <!-- Fichier JavaScript pour la logique -->
+
+</body>
+</html>

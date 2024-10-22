@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RéPass - Votre compagnon pour l'île de Ré</title>
+
+    <style>
+        /* Effet de parallax pour toute la page */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Courier New', Courier, monospace; /* Application de la police Courier New */
+        }
+
+        body {
+            scroll-behavior: smooth;
+        }
+
+        /* Photo de fond sur toute la page */
+        body::before {
+            content: "";
+            background-image: url('photodacceuil.jpg'); /* Chemin mis à jour pour la photo */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.8;
+        }
+
+        /* Centrage du texte principal */
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            position: relative;
+        }
+
+        .hero-section h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .hero-section h2 {
+            font-size: 2em;
+            margin-bottom: 40px;
+        }
+
+        /* Menu de navigation sous les textes principaux */
+        .hero-section nav a {
+            margin: 0 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .hero-section nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        section {
+            padding: 100px 50px;
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        #about, #partners {
+            padding-top: 100px;
+        }
+
+        /* Style de la section Nous découvrir */
+        #about {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        #about h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Style de la section Partenaires */
+        #partners {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        #partners h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        #partners .villages-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            justify-items: center;
+            padding: 20px;
+        }
+
+        .village-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 200px;
+            height: 150px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            text-align: center;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .village-link:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            transform: scale(1.05);
+        }
+
+        /* Section Nous suivre */
+        .social-section {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .social-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .social-links a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: scale(1.1);
+        }
+
+        /* Bouton Service Après Vente */
+        .sav-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 1.2em;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .sav-button:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+        }
+
+        /* Amélioration du footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: background-color 0.3s;
+        }
+
+        footer a:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 3em;
+            }
+
+            .hero-section h2 {
+                font-size: 1.5em;
+            }
+
+            .hero-section nav a {
+                font-size: 1em;
+            }
+
+            .villages-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .social-links a {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Section principale avec le texte centré -->
+    <div class="hero-section">
+        <h1>RéPass</h1>
+        <h2>Pour votre prochain séjour sur l'île de Ré</h2>
+        <nav>
+            <a href="#about">Nous découvrir</a>
+            <a href="#partners">Partenaires</a>
+            <a href="boutique.html">Boutique</a>
+        </nav>
+    </div>
+
+    <!-- Section Nous découvrir -->
+    <section id="about">
+        <h2>Nous découvrir</h2>
+        <p>RéPass est votre compagnon de voyage pour découvrir l'île de Ré. Nous vous proposons une carte exclusive qui vous permet de bénéficier de réductions dans les meilleurs restaurants, commerces, et activités de l'île. Notre mission est de vous offrir une expérience inoubliable tout en soutenant les commerçants locaux.</p>
+    </section>
+
+    <!-- Section Partenaires -->
+    <section id="partners">
+        <h2>Nos Partenaires</h2>
+        <div class="villages-grid">
+            <a href="partenaires.html" class="village-link">La Flotte</a>
+            <a href="partenaires.html" class="village-link">Saint-Martin-de-Ré</a>
+            <a href="partenaires.html" class="village-link">Le Bois-Plage-en-Ré</a>
+            <a href="partenaires.html" class="village-link">Ars-en-Ré</a>
+            <a href="partenaires.html" class="village-link">Les Portes-en-Ré</a>
+            <a href="partenaires.html" class="village-link">Sainte-Marie-de-Ré</a>
+            <a href="partenaires.html" class="village-link">Rivedoux-Plage</a>
+            <a href="partenaires.html" class="village-link">Loix</a>
+            <a href="partenaires.html" class="village-link">La Couarde-sur-Mer</a>
+            <a href="partenaires.html" class="village-link">Saint-Clément-des-Baleines</a>
+        </div>
+    </section>
+
+    <!-- Section Nous suivre -->
+    <section class="social-section">
+        <h2>Nous suivre</h2>
+        <div class="social-links">
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            <a href="https://www.twitter.com" target="_blank">Twitter</a>
+        </div>
+
+        <a href="service-apres-vente.html" class="sav-button">Service Après-Vente</a>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>© 2024 RéPass - Tous droits réservés.</p>
+        <a href="mentionslegales.html">Mentions légales</a>
+    </footer>
+
+</body>
+</html>

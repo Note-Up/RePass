@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Partenaires Locaux - RéPass</title>
+
+    <style>
+        /* Effet de parallax et police Courier New */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            scroll-behavior: smooth;
+        }
+
+        /* Photo de fond sur toute la page */
+        body::before {
+            content: "";
+            background-image: url('photopartenaires.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.8;
+        }
+
+        /* Bouton retour à la page d'accueil plus visible */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 15px 25px;
+            background-color: rgba(255, 255, 255, 0.4);
+            color: black;
+            font-size: 1.2em;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            background-color: rgba(255, 255, 255, 0.6);
+            transform: scale(1.05);
+        }
+
+        /* Titre principal centré */
+        .partners-title {
+            text-align: center;
+            color: white;
+            margin-top: 100px;
+            font-size: 3em;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            display: inline-block;
+        }
+
+        /* Boutons de navigation pour chaque village */
+        .village-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .village-buttons a {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.3);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 1.2em;
+        }
+
+        .village-buttons a:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+            transform: scale(1.05);
+        }
+
+        /* Style des sections pour chaque village */
+        .village-section {
+            margin: 50px auto;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .village-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .village-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .village-section li {
+            margin-bottom: 15px;
+        }
+
+        .village-section li span {
+            font-weight: bold;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .partners-title {
+                font-size: 2em;
+            }
+
+            .village-section h2 {
+                font-size: 2em;
+            }
+
+            .village-buttons a {
+                font-size: 1em;
+            }
+
+            .back-button {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bouton Retour à la page d'accueil -->
+    <a href="index.html" class="back-button">Retour à la page d'accueil</a>
+
+    <!-- Titre principal et boutons de navigation -->
+    <h1 class="partners-title">Nos Partenaires Locaux</h1>
+
+    <div class="village-buttons">
+        <a href="#la-flotte">La Flotte</a>
+        <a href="#saint-martin">Saint-Martin-de-Ré</a>
+        <a href="#le-bois-plage">Le Bois-Plage-en-Ré</a>
+        <a href="#ars-en-re">Ars-en-Ré</a>
+        <a href="#les-portes-en-re">Les Portes-en-Ré</a>
+        <a href="#sainte-marie">Sainte-Marie-de-Ré</a>
+        <a href="#rivedoux">Rivedoux-Plage</a>
+        <a href="#loix">Loix</a>
+        <a href="#la-couarde">La Couarde-sur-Mer</a>
+        <a href="#saint-clement">Saint-Clément-des-Baleines</a>
+    </div>
+
+    <!-- Section La Flotte -->
+    <section class="village-section" id="la-flotte">
+        <h2>La Flotte</h2>
+        <ul>
+            <li><span>Restaurant Le Gourmet:</span> - Offre: 10% de réduction sur le menu du midi. Adresse: 15 Rue des Marins, 17630 La Flotte</li>
+            <li><span>Boulangerie du Port:</span> - Offre: Une pâtisserie offerte pour deux achetées. Adresse: 8 Quai de Sénac, 17630 La Flotte</li>
+        </ul>
+    </section>
+
+    <!-- Section Saint-Martin-de-Ré -->
+    <section class="village-section" id="saint-martin">
+        <h2>Saint-Martin-de-Ré</h2>
+        <ul>
+            <li><span>Le Café de la Plage:</span> - Offre: Un café offert pour chaque menu commandé. Adresse: 5 Rue de la Plage, 17410 Saint-Martin-de-Ré</li>
+            <li><span>La Crêperie des Remparts:</span> - Offre: 2 crêpes achetées, 1 offerte. Adresse: 12 Rue de la Citadelle, 17410 Saint-Martin-de-Ré</li>
+        </ul>
+    </section>
+
+    <!-- Section Le Bois-Plage-en-Ré -->
+    <section class="village-section" id="le-bois-plage">
+        <h2>Le Bois-Plage-en-Ré</h2>
+        <ul>
+            <li><span>Le Marché Gourmand:</span> - Offre: 5% de réduction sur tous les produits du marché. Adresse: Place du Marché, 17580 Le Bois-Plage-en-Ré</li>
+            <li><span>Bar Le Rétais:</span> - Offre: Un apéritif offert pour toute commande de deux plats. Adresse: 10 Rue de l'Église, 17580 Le Bois-Plage-en-Ré</li>
+        </ul>
+    </section>
+
+    <!-- Section Ars-en-Ré -->
+    <section class="village-section" id="ars-en-re">
+        <h2>Ars-en-Ré</h2>
+        <ul>
+            <li><span>La Poissonnerie du Phare:</span> - Offre: Un poisson offert pour trois achetés. Adresse: 7 Quai de la Poissonnerie, 17590 Ars-en-Ré</li>
+            <li><span>Le Café du Port:</span> - Offre: 1 boisson offerte pour chaque repas commandé. Adresse: 3 Quai du Port, 17590 Ars-en-Ré</li>
+        </ul>
+    </section>
+
+    <!-- Section Les Portes-en-Ré -->
+    <section class="village-section" id="les-portes-en-re">
+        <h2>Les Portes-en-Ré</h2>
+        <ul>
+            <li><span>La Ferme du P'tit Marché:</span> - Offre: 10% de réduction sur les produits bio. Adresse: 18 Rue des Fermes, 17880 Les Portes-en-Ré</li>
+            <li><span>Le Snack du Marais:</span> - Offre: Une boisson gratuite pour deux sandwichs achetés. Adresse: 22 Rue du Marais, 17880 Les Portes-en-Ré</li>
+        </ul>
+    </section>
+
+    <!-- Section Sainte-Marie-de-Ré -->
+    <section class="village-section" id="sainte-marie">
+        <h2>Sainte-Marie-de-Ré</h2>
+        <ul>
+            <li><span>La Boulangerie des Vents:</span> - Offre: Un croissant offert pour trois baguettes achetées. Adresse: 15 Rue du Vieux Port, 17740 Sainte-Marie-de-Ré</li>
+            <li><span>Le Jardin des Délices:</span> - Offre: 1 boisson offerte pour chaque dessert commandé. Adresse: 10 Rue de la Mer, 17740 Sainte-Marie-de-Ré</li>
+        </ul>
+    </section>
+
+    <!-- Section Rivedoux-Plage -->
+    <section class="village-section" id="rivedoux">
+        <h2>Rivedoux-Plage</h2>
+        <ul>
+            <li><span>Le Bistro de la Plage:</span> - Offre: Un verre de vin offert pour chaque plat principal commandé. Adresse: 4 Rue de la Plage, 17940 Rivedoux-Plage</li>
+            <li><span>La Maison du Port:</span> - Offre: 10% de réduction sur les fruits de mer. Adresse: 2 Quai de la Mairie, 17940 Rivedoux-Plage</li>
+        </ul>
+    </section>
+
+    <!-- Section Loix -->
+    <section class="village-section" id="loix">
+        <h2>Loix</h2>
+        <ul>
+            <li><span>Le Resto des Marais:</span> - Offre: Une entrée offerte pour deux plats commandés. Adresse: 9 Rue des Marais, 17111 Loix</li>
+            <li><span>La Ferme des Îles:</span> - Offre: 5% de réduction sur les produits locaux. Adresse: 7 Rue de l'Écluse, 17111 Loix</li>
+        </ul>
+    </section>
+
+    <!-- Section La Couarde-sur-Mer -->
+    <section class="village-section" id="la-couarde">
+        <h2>La Couarde-sur-Mer</h2>
+        <ul>
+            <li><span>L'Auberge des Tilleuls:</span> - Offre: Un dessert offert pour deux plats principaux commandés. Adresse: 11 Rue des Tilleuls, 17670 La Couarde-sur-Mer</li>
+            <li><span>Le Café des Dunes:</span> - Offre: Une boisson offerte pour deux sandwichs achetés. Adresse: 13 Rue des Dunes, 17670 La Couarde-sur-Mer</li>
+        </ul>
+    </section>
+
+    <!-- Section Saint-Clément-des-Baleines -->
+    <section class="village-section" id="saint-clement">
+        <h2>Saint-Clément-des-Baleines</h2>
+        <ul>
+            <li><span>Le Phare des Baleines Café:</span> - Offre: Une crêpe offerte pour deux achetées. Adresse: 2 Rue du Phare, 17590 Saint-Clément-des-Baleines</li>
+            <li><span>Le Marché des Baleines:</span> - Offre: 5% de réduction sur tous les produits. Adresse: 4 Rue du Phare, 17590 Saint-Clément-des-Baleines</li>
+        </ul>
+    </section>
+
+</body>
+</html>
